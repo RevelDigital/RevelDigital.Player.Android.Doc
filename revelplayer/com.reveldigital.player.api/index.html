@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.reveldigital.player.api</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../images/ic_launcher_foreground.png">
+<link href="../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="revelplayer::com.reveldigital.player.api////PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../index.html">revelplayer</a><span class="delimiter">/</span><span class="current">com.reveldigital.player.api</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1440569426%2FClasslikes%2F2049557335" anchor-label="AnimationHelper" id="-1440569426%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-animation-helper/index.html"><span>Animation</span><wbr></wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1440569426%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-animation-helper/index.html">AnimationHelper</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-animation-helper/index.html">AnimationHelper</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-animation-helper/index.html">AnimationHelper</a></div><div class="brief ">Provides utility methods for creating and running common <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a> animations.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="416300030%2FClasslikes%2F2049557335" anchor-label="Beacon" id="416300030%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-beacon/index.html"><span><span>Beacon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="416300030%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon/index.html">Beacon</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon/index.html">Beacon</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon/index.html">Beacon</a></div><div class="brief ">Represents a beacon device and the context of a beacon-related event.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="432954355%2FClasslikes%2F2049557335" anchor-label="BeaconUser" id="432954355%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-beacon-user/index.html"><span>Beacon</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="432954355%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon-user/index.html">BeaconUser</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon-user/index.html">BeaconUser</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-beacon-user/index.html">BeaconUser</a></div><div class="brief ">Defines the contract for accessing user profile information associated with a beacon event.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1279900203%2FClasslikes%2F2049557335" anchor-label="Command" id="-1279900203%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-command/index.html"><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1279900203%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-command/index.html">Command</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-command/index.html">Command</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-command/index.html">Command</a></div><div class="brief ">Defines a contract for representing a command to be executed within the player system.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1822688699%2FClasslikes%2F2049557335" anchor-label="Condition" id="-1822688699%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-condition/index.html"><span><span>Condition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1822688699%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-condition/index.html">Condition</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-condition/index.html">Condition</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-condition/index.html">Condition</a></div><div class="brief ">Defines a contract for representing a condition that can be evaluated.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="727873751%2FClasslikes%2F2049557335" anchor-label="ConnectivityListener" id="727873751%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-connectivity-listener/index.html"><span>Connectivity</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="727873751%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a></div><div class="brief ">Interface for receiving notifications about changes in network connectivity status.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1293228250%2FClasslikes%2F2049557335" anchor-label="Controller" id="-1293228250%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-controller/index.html"><span><span>Controller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1293228250%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-controller/index.html">Controller</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-controller/index.html">Controller</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-controller/index.html">Controller</a></div><div class="brief ">Defines the primary programmatic interface for interacting with and controlling the RevelDigital player engine.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1700612705%2FClasslikes%2F2049557335" anchor-label="DayOfWeekType" id="-1700612705%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-day-of-week-type/index.html"><span>Day</span><wbr></wbr><span>Of</span><wbr></wbr><span>Week</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1700612705%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-day-of-week-type/index.html">DayOfWeekType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-day-of-week-type/index.html">DayOfWeekType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-day-of-week-type/index.html">DayOfWeekType</a></div><div class="brief ">Represents the days of the week using a bitmask pattern.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1968897492%2FClasslikes%2F2049557335" anchor-label="Device" id="-1968897492%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-device/index.html"><span><span>Device</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1968897492%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-device/index.html">Device</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-device/index.html">Device</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-device/index.html">Device</a></div><div class="brief ">Represents a registered device within the RevelDigital platform.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-477392602%2FClasslikes%2F2049557335" anchor-label="Event" id="-477392602%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-event/index.html"><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-477392602%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event/index.html">Event</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event/index.html">Event</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-event/index.html">Event</a></div><div class="brief ">Represents a discrete occurrence or action within the application that is tracked for analytics, logging, or operational purposes.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2053284151%2FClasslikes%2F2049557335" anchor-label="FaceInfo" id="2053284151%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-face-info/index.html"><span>Face</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053284151%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-face-info/index.html">FaceInfo</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-face-info/index.html">FaceInfo</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-face-info/index.html">FaceInfo</a></div><div class="brief ">Represents structured information about a detected human face, typically obtained from a computer vision or facial analysis system.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-640773626%2FClasslikes%2F2049557335" anchor-label="File" id="-640773626%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-file/index.html"><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-640773626%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-file/index.html">File</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-file/index.html">File</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-file/index.html">File</a></div><div class="brief ">Represents a file managed or utilized by the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1949659914%2FClasslikes%2F2049557335" anchor-label="Gadget" id="-1949659914%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-gadget/index.html"><span><span>Gadget</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1949659914%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-gadget/index.html">Gadget</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-gadget/index.html">Gadget</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-gadget/index.html">Gadget</a></div><div class="brief ">Represents a RevelDigital Gadget, which is typically a self-contained HTML-based application designed to run within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="332564999%2FClasslikes%2F2049557335" anchor-label="GenderType" id="332564999%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-gender-type/index.html"><span>Gender</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="332564999%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-gender-type/index.html">GenderType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-gender-type/index.html">GenderType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-gender-type/index.html">GenderType</a></div><div class="brief ">Represents predefined gender categories.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="74505561%2FClasslikes%2F2049557335" anchor-label="Impression" id="74505561%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-impression/index.html"><span><span>Impression</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="74505561%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-impression/index.html">Impression</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-impression/index.html">Impression</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-impression/index.html">Impression</a></div><div class="brief ">Represents an &quot;impression&quot; event, typically generated when one or more human faces are detected by a sensor (e.g., camera) associated with the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="465066349%2FClasslikes%2F2049557335" anchor-label="Location" id="465066349%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-location/index.html"><span><span>Location</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="465066349%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-location/index.html">Location</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-location/index.html">Location</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-location/index.html">Location</a></div><div class="brief ">Represents geographical location information.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1281712426%2FClasslikes%2F2049557335" anchor-label="Module" id="-1281712426%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-module/index.html"><span><span>Module</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1281712426%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-module/index.html">Module</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-module/index.html">Module</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-module/index.html">Module</a></div><div class="brief ">Represents a distinct region or zone within a digital signage screen layout or template.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1971037636%2FClasslikes%2F2049557335" anchor-label="ModuleType" id="-1971037636%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-module-type/index.html"><span>Module</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1971037636%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-module-type/index.html">ModuleType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-module-type/index.html">ModuleType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-module-type/index.html">ModuleType</a></div><div class="brief ">Defines the various types of functional units or content regions (Modules) that can be used within the RevelDigital player's screen layouts.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-674551413%2FClasslikes%2F2049557335" anchor-label="OnBeaconListener" id="-674551413%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-beacon-listener/index.html"><span>On</span><wbr></wbr><span>Beacon</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-674551413%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a></div><div class="brief ">Interface for receiving callbacks when beacon-related events occur, such as detecting nearby iBeacons or Eddystone beacons.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1034910422%2FClasslikes%2F2049557335" anchor-label="OnCallbackListener" id="-1034910422%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-callback-listener/index.html"><span>On</span><wbr></wbr><span>Callback</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1034910422%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-callback-listener/index.html">OnCallbackListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-callback-listener/index.html">OnCallbackListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-callback-listener/index.html">OnCallbackListener</a></div><div class="brief ">A listener interface for receiving generic callback events, often originating from web-based content (such as RevelDigital Gadgets) or other extensible components within the player environment.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2085899968%2FClasslikes%2F2049557335" anchor-label="OnCommandListener" id="2085899968%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-command-listener/index.html"><span>On</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2085899968%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="brief ">Interface for receiving and processing command events within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-865933466%2FClasslikes%2F2049557335" anchor-label="OnImpressionListener" id="-865933466%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-impression-listener/index.html"><span>On</span><wbr></wbr><span>Impression</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-865933466%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a></div><div class="brief ">Interface for receiving callbacks when an &quot;impression&quot; event occurs within the RevelDigital player environment.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1996483673%2FClasslikes%2F2049557335" anchor-label="OnMotionListener" id="1996483673%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-motion-listener/index.html"><span>On</span><wbr></wbr><span>Motion</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996483673%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-motion-listener/index.html">OnMotionListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-motion-listener/index.html">OnMotionListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-motion-listener/index.html">OnMotionListener</a></div><div class="brief ">The listener interface for receiving notifications when motion is detected by a connected motion sensor (e.g., PIR sensor, camera-based motion detection).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1261532542%2FClasslikes%2F2049557335" anchor-label="OnNavigateListener" id="1261532542%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-navigate-listener/index.html"><span>On</span><wbr></wbr><span>Navigate</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1261532542%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-navigate-listener/index.html">OnNavigateListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-navigate-listener/index.html">OnNavigateListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-navigate-listener/index.html">OnNavigateListener</a></div><div class="brief ">The listener interface for receiving &quot;onNavigate&quot; events, typically generated by components that handle web content rendering, such as an embedded WebView (e.g.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="349481180%2FClasslikes%2F2049557335" anchor-label="OnPlayedListener" id="349481180%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-on-played-listener/index.html"><span>On</span><wbr></wbr><span>Played</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="349481180%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-played-listener/index.html">OnPlayedListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-played-listener/index.html">OnPlayedListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-on-played-listener/index.html">OnPlayedListener</a></div><div class="brief ">The listener interface for receiving notifications when a piece of content (represented by a <a href="[android-jvm]-source/index.html">Source</a> object) has been &quot;played&quot; or displayed within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-438179603%2FClasslikes%2F2049557335" anchor-label="Option" id="-438179603%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-option/index.html"><span><span>Option</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-438179603%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-option/index.html">Option</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-option/index.html">Option</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-option/index.html">Option</a></div><div class="brief ">Represents a configuration option, typically a key-value pair, used to customize the behavior, appearance, or data sources of various components within the RevelDigital player system.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354476586%2FClasslikes%2F2049557335" anchor-label="OrientationType" id="-354476586%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-orientation-type/index.html"><span>Orientation</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354476586%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-orientation-type/index.html">OrientationType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-orientation-type/index.html">OrientationType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-orientation-type/index.html">OrientationType</a></div><div class="brief ">Represents the possible screen orientations for display purposes within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="113385968%2FClasslikes%2F2049557335" anchor-label="Playlist" id="113385968%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-playlist/index.html"><span><span>Playlist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="113385968%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist/index.html">Playlist</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist/index.html">Playlist</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist/index.html">Playlist</a></div><div class="brief ">Represents a collection of media items or content sources intended for sequential or scheduled playback within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1133813916%2FClasslikes%2F2049557335" anchor-label="PlaylistListener" id="1133813916%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-playlist-listener/index.html"><span>Playlist</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1133813916%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist-listener/index.html">PlaylistListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist-listener/index.html">PlaylistListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-playlist-listener/index.html">PlaylistListener</a></div><div class="brief ">Interface for receiving callbacks about events related to the playback lifecycle of individual <a href="[android-jvm]-source/index.html">Source</a> items within a playlist.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="698400854%2FClasslikes%2F2049557335" anchor-label="PlaylistType" id="698400854%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-playlist-type/index.html"><span>Playlist</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="698400854%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-playlist-type/index.html">PlaylistType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-playlist-type/index.html">PlaylistType</a></div><div class="symbol monospace"><span class="token keyword">enum </span><a href="[android-jvm]-playlist-type/index.html">PlaylistType</a></div><div class="brief ">Defines the different types or categories of playlists available in the RevelDigital player system.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1517341457%2FClasslikes%2F2049557335" anchor-label="RevelControl" id="-1517341457%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-revel-control/index.html"><span>Revel</span><wbr></wbr><span><span>Control</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1517341457%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="brief ">Defines the contract for a controllable visual component or logical unit within the RevelDigital player's display surface or operational flow.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1915680565%2FClasslikes%2F2049557335" anchor-label="Schedule" id="-1915680565%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-schedule/index.html"><span><span>Schedule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1915680565%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-schedule/index.html">Schedule</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-schedule/index.html">Schedule</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-schedule/index.html">Schedule</a></div><div class="brief ">Defines a schedule for the playback of a <a href="[android-jvm]-playlist/index.html">Playlist</a> or display of a <a href="[android-jvm]-template/index.html">Template</a> within the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1120038662%2FClasslikes%2F2049557335" anchor-label="SerialListener" id="-1120038662%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-serial-listener/index.html"><span>Serial</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1120038662%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-serial-listener/index.html">SerialListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-serial-listener/index.html">SerialListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-serial-listener/index.html">SerialListener</a></div><div class="brief ">Interface for receiving asynchronous events and data from a serial port connected to the RevelDigital player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="822320875%2FClasslikes%2F2049557335" anchor-label="SkipSourceException" id="822320875%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-skip-source-exception/index.html"><span>Skip</span><wbr></wbr><span>Source</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="822320875%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-skip-source-exception/index.html">SkipSourceException</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-skip-source-exception/index.html">SkipSourceException</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-skip-source-exception/index.html">SkipSourceException</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a></div><div class="brief ">An exception thrown by a <a href="[android-jvm]-playlist-listener/on-source-started.html">onSourceStarted</a> implementation to signal that the currently starting content <a href="[android-jvm]-source/index.html">Source</a> should be skipped by the playback engine.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="420532231%2FClasslikes%2F2049557335" anchor-label="Source" id="420532231%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-source/index.html"><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="420532231%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-source/index.html">Source</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-source/index.html">Source</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-source/index.html">Source</a></div><div class="brief ">Represents a source of content to be displayed by the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-793533368%2FClasslikes%2F2049557335" anchor-label="Template" id="-793533368%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-template/index.html"><span><span>Template</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-793533368%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template/index.html">Template</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template/index.html">Template</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template/index.html">Template</a></div><div class="brief ">Represents a predefined layout structure or design that can be populated with dynamic content within the RevelDigital player system.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1147816692%2FClasslikes%2F2049557335" anchor-label="TemplateListener" id="1147816692%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-template-listener/index.html"><span>Template</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1147816692%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template-listener/index.html">TemplateListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template-listener/index.html">TemplateListener</a></div><div class="symbol monospace"><span class="token keyword">interface </span><a href="[android-jvm]-template-listener/index.html">TemplateListener</a></div><div class="brief ">The listener interface for receiving lifecycle and interaction events related to a <a href="[android-jvm]-template/index.html">Template</a> instance.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

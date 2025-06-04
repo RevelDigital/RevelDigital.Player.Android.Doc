@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]Condition</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/ic_launcher_foreground.png">
+<link href="../../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="revelplayer::com.reveldigital.player.api/Condition///PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../../index.html">revelplayer</a><span class="delimiter">/</span><a href="../index.html">com.reveldigital.player.api</a><span class="delimiter">/</span><span class="current">[androidJvm]Condition</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Condition</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Condition</a></div><p class="paragraph">Defines a contract for representing a condition that can be evaluated. </p><p class="paragraph">Conditions are used to determine whether certain criteria are met, often for controlling content display, triggering actions, or implementing conditional logic within the player. Each condition has a type, an evaluation sequence, an operator to combine it with other conditions, and up to four generic values that can be interpreted based on the condition's type.</p><p class="paragraph">The interface provides methods to access these values as strings, integers, doubles, or dates, allowing implementations to store and retrieve condition parameters in a flexible manner. Conditions are intended to be evaluated in a specific order, determined by their sequence number.</p><p class="paragraph">Example Scenario: A condition might check if the current time is within a specific range (using date values), or if a certain device capability is present (using string values).</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1497778882%2FProperties%2F2049557335" anchor-label="OPERATOR_AND" id="-1497778882%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-e-r-a-t-o-r_-a-n-d.html"><span>OPERATOR_</span><wbr></wbr><span>AND</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1497778882%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-p-e-r-a-t-o-r_-a-n-d.html">OPERATOR_AND</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div><div class="brief ">Operator constant representing a logical AND.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1544325450%2FProperties%2F2049557335" anchor-label="OPERATOR_AND_NOT" id="1544325450%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-e-r-a-t-o-r_-a-n-d_-n-o-t.html"><span>OPERATOR_</span><wbr></wbr><span>AND_</span><wbr></wbr><span>NOT</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1544325450%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-p-e-r-a-t-o-r_-a-n-d_-n-o-t.html">OPERATOR_AND_NOT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div><div class="brief ">Operator constant representing a logical AND NOT.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1566793502%2FProperties%2F2049557335" anchor-label="OPERATOR_OR" id="-1566793502%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-e-r-a-t-o-r_-o-r.html"><span>OPERATOR_</span><wbr></wbr><span>OR</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1566793502%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-p-e-r-a-t-o-r_-o-r.html">OPERATOR_OR</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div><div class="brief ">Operator constant representing a logical OR.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1886846226%2FProperties%2F2049557335" anchor-label="OPERATOR_OR_NOT" id="-1886846226%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-p-e-r-a-t-o-r_-o-r_-n-o-t.html"><span>OPERATOR_</span><wbr></wbr><span>OR_</span><wbr></wbr><span>NOT</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1886846226%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-p-e-r-a-t-o-r_-o-r_-n-o-t.html">OPERATOR_OR_NOT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div><div class="brief ">Operator constant representing a logical OR NOT.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-203607012%2FFunctions%2F2049557335" anchor-label="getDateValue1" id="-203607012%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-date-value1.html"><span>get</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Value1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-203607012%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-date-value1.html"><span class="token function">getDateValue1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the first generic value, attempting to interpret it as a <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-172587205%2FFunctions%2F2049557335" anchor-label="getDateValue2" id="-172587205%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-date-value2.html"><span>get</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Value2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-172587205%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-date-value2.html"><span class="token function">getDateValue2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the second generic value, attempting to interpret it as a <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-141567398%2FFunctions%2F2049557335" anchor-label="getDateValue3" id="-141567398%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-date-value3.html"><span>get</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Value3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-141567398%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-date-value3.html"><span class="token function">getDateValue3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the third generic value, attempting to interpret it as a <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-110547591%2FFunctions%2F2049557335" anchor-label="getDateValue4" id="-110547591%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-date-value4.html"><span>get</span><wbr></wbr><span>Date</span><wbr></wbr><span><span>Value4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-110547591%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-date-value4.html"><span class="token function">getDateValue4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the fourth generic value, attempting to interpret it as a <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1145084839%2FFunctions%2F2049557335" anchor-label="getDoubleValue1" id="-1145084839%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-double-value1.html"><span>get</span><wbr></wbr><span>Double</span><wbr></wbr><span><span>Value1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1145084839%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-double-value1.html"><span class="token function">getDoubleValue1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the first generic value, attempting to interpret it as a double.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1114065032%2FFunctions%2F2049557335" anchor-label="getDoubleValue2" id="-1114065032%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-double-value2.html"><span>get</span><wbr></wbr><span>Double</span><wbr></wbr><span><span>Value2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114065032%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-double-value2.html"><span class="token function">getDoubleValue2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the second generic value, attempting to interpret it as a double.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1083045225%2FFunctions%2F2049557335" anchor-label="getDoubleValue3" id="-1083045225%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-double-value3.html"><span>get</span><wbr></wbr><span>Double</span><wbr></wbr><span><span>Value3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1083045225%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-double-value3.html"><span class="token function">getDoubleValue3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the third generic value, attempting to interpret it as a double.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1052025418%2FFunctions%2F2049557335" anchor-label="getDoubleValue4" id="-1052025418%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-double-value4.html"><span>get</span><wbr></wbr><span>Double</span><wbr></wbr><span><span>Value4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1052025418%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-double-value4.html"><span class="token function">getDoubleValue4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the fourth generic value, attempting to interpret it as a double.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1955759999%2FFunctions%2F2049557335" anchor-label="getIntValue1" id="-1955759999%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-int-value1.html"><span>get</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Value1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1955759999%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-int-value1.html"><span class="token function">getIntValue1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the first generic value, attempting to interpret it as an integer.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1924740192%2FFunctions%2F2049557335" anchor-label="getIntValue2" id="-1924740192%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-int-value2.html"><span>get</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Value2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1924740192%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-int-value2.html"><span class="token function">getIntValue2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the second generic value, attempting to interpret it as an integer.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1893720385%2FFunctions%2F2049557335" anchor-label="getIntValue3" id="-1893720385%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-int-value3.html"><span>get</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Value3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1893720385%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-int-value3.html"><span class="token function">getIntValue3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the third generic value, attempting to interpret it as an integer.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1862700578%2FFunctions%2F2049557335" anchor-label="getIntValue4" id="-1862700578%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-int-value4.html"><span>get</span><wbr></wbr><span>Int</span><wbr></wbr><span><span>Value4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1862700578%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-int-value4.html"><span class="token function">getIntValue4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the fourth generic value, attempting to interpret it as an integer.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-978556506%2FFunctions%2F2049557335" anchor-label="getOperator" id="-978556506%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-operator.html"><span>get</span><wbr></wbr><span><span>Operator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-978556506%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-operator.html"><span class="token function">getOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the logical operator used to combine this condition with a preceding condition or a default state.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="409691433%2FFunctions%2F2049557335" anchor-label="getSequence" id="409691433%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-sequence.html"><span>get</span><wbr></wbr><span><span>Sequence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="409691433%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-sequence.html"><span class="token function">getSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the sequence number of this condition.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-770668976%2FFunctions%2F2049557335" anchor-label="getType" id="-770668976%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-type.html"><span>get</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-770668976%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-type.html"><span class="token function">getType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the type of condition, which determines how its values are interpreted and evaluated.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="543756330%2FFunctions%2F2049557335" anchor-label="getValue1" id="543756330%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value1.html"><span>get</span><wbr></wbr><span><span>Value1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="543756330%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-value1.html"><span class="token function">getValue1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the first generic value associated with this condition, as a string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="574776137%2FFunctions%2F2049557335" anchor-label="getValue2" id="574776137%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value2.html"><span>get</span><wbr></wbr><span><span>Value2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="574776137%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-value2.html"><span class="token function">getValue2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the second generic value associated with this condition, as a string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="605795944%2FFunctions%2F2049557335" anchor-label="getValue3" id="605795944%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value3.html"><span>get</span><wbr></wbr><span><span>Value3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="605795944%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-value3.html"><span class="token function">getValue3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the third generic value associated with this condition, as a string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="636815751%2FFunctions%2F2049557335" anchor-label="getValue4" id="636815751%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value4.html"><span>get</span><wbr></wbr><span><span>Value4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="636815751%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-value4.html"><span class="token function">getValue4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the fourth generic value associated with this condition, as a string.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

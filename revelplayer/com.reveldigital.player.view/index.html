@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.reveldigital.player.view</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../images/ic_launcher_foreground.png">
+<link href="../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="revelplayer::com.reveldigital.player.view////PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../index.html">revelplayer</a><span class="delimiter">/</span><span class="current">com.reveldigital.player.view</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1296989892%2FClasslikes%2F2049557335" anchor-label="CarouselView" id="-1296989892%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-carousel-view/index.html"><span>Carousel</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1296989892%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-carousel-view/index.html">CarouselView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-carousel-view/index.html">CarouselView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-carousel-view/index.html">CarouselView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="brief ">A custom view that displays a collection of image sources in a carousel-style interface, typically using a <a href="https://developer.android.com/reference/kotlin/androidx/viewpager/widget/ViewPager.html">ViewPager</a> with a cover flow effect.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="678922286%2FClasslikes%2F2049557335" anchor-label="ClockView" id="678922286%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-clock-view/index.html"><span>Clock</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="678922286%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-clock-view/index.html">ClockView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-clock-view/index.html">ClockView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-clock-view/index.html">ClockView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/LinearLayout.html">LinearLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="brief ">A custom view that displays a clock, which can be digital, analog, or a specialized real-time updating clock.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2137531054%2FClasslikes%2F2049557335" anchor-label="ComboView" id="2137531054%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-combo-view/index.html"><span>Combo</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2137531054%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-combo-view/index.html">ComboView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span>, <span data-unresolved-link="com.reveldigital.player.view.internal/ComboScrollView.OnScrollPositionListener///PointingToDeclaration/">ComboScrollView.OnScrollPositionListener</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-combo-view/index.html">ComboView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span>, <span data-unresolved-link="com.reveldigital.player.view.internal/ComboScrollView.OnScrollPositionListener///PointingToDeclaration/">ComboScrollView.OnScrollPositionListener</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-combo-view/index.html">ComboView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span>, <span data-unresolved-link="com.reveldigital.player.view.internal/ComboScrollView.OnScrollPositionListener///PointingToDeclaration/">ComboScrollView.OnScrollPositionListener</span></div><div class="brief ">A custom view designed to display a combination of other views vertically within a scrollable container.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1179002996%2FClasslikes%2F2049557335" anchor-label="FlashView" id="-1179002996%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-flash-view/index.html"><span>Flash</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1179002996%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-flash-view/index.html">FlashView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-flash-view/index.html">FlashView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-flash-view/index.html">FlashView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a> subclass designed to display Adobe Flash (SWF) content.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-571151920%2FClasslikes%2F2049557335" anchor-label="GadgetView" id="-571151920%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-gadget-view/index.html"><span>Gadget</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-571151920%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gadget-view/index.html">GadgetView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gadget-view/index.html">GadgetView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gadget-view/index.html">GadgetView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a> subclass designed to display &quot;gadgets,&quot; which are typically web-based applications or content modules.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-640055446%2FClasslikes%2F2049557335" anchor-label="GalleryView" id="-640055446%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-gallery-view/index.html"><span>Gallery</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-640055446%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gallery-view/index.html">GalleryView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.youtube/QueryVideoInfosTask.OnCompleted///PointingToDeclaration/">QueryVideoInfosTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gallery-view/index.html">GalleryView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.youtube/QueryVideoInfosTask.OnCompleted///PointingToDeclaration/">QueryVideoInfosTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-gallery-view/index.html">GalleryView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.youtube/QueryVideoInfosTask.OnCompleted///PointingToDeclaration/">QueryVideoInfosTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a> that displays a gallery of different types of media, including images, videos, and web content.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="618204397%2FClasslikes%2F2049557335" anchor-label="HotSpotView" id="618204397%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-hot-spot-view/index.html"><span>Hot</span><wbr></wbr><span>Spot</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="618204397%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-hot-spot-view/index.html">HotSpotView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-hot-spot-view/index.html">HotSpotView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-hot-spot-view/index.html">HotSpotView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a> that represents an interactive &quot;hotspot&quot; area on the screen.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-587298662%2FClasslikes%2F2049557335" anchor-label="MarqueeView" id="-587298662%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-marquee-view/index.html"><span>Marquee</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-587298662%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-marquee-view/index.html">MarqueeView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.twitter/DownloadTwitterTask.OnCompleted///PointingToDeclaration/">DownloadTwitterTask.OnCompleted</span>, <a href="https://developer.android.com/reference/kotlin/java/io/FilenameFilter.html">FilenameFilter</a>, <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-marquee-view/index.html">MarqueeView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.twitter/DownloadTwitterTask.OnCompleted///PointingToDeclaration/">DownloadTwitterTask.OnCompleted</span>, <a href="https://developer.android.com/reference/kotlin/java/io/FilenameFilter.html">FilenameFilter</a>, <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-marquee-view/index.html">MarqueeView</a> : <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.twitter/DownloadTwitterTask.OnCompleted///PointingToDeclaration/">DownloadTwitterTask.OnCompleted</span>, <a href="https://developer.android.com/reference/kotlin/java/io/FilenameFilter.html">FilenameFilter</a>, <a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a> that displays horizontally scrolling text and images, commonly known as a &quot;marquee&quot; or &quot;ticker&quot;.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-942166887%2FClasslikes%2F2049557335" anchor-label="PagerView" id="-942166887%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-pager-view/index.html"><span>Pager</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-942166887%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-pager-view/index.html">PagerView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/viewpager/widget/ViewPager.html">ViewPager</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-pager-view/index.html">PagerView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/viewpager/widget/ViewPager.html">ViewPager</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-pager-view/index.html">PagerView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/viewpager/widget/ViewPager.html">ViewPager</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="brief ">A <a href="https://developer.android.com/reference/kotlin/androidx/viewpager/widget/ViewPager.html">ViewPager</a> subclass that implements <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a> for displaying a collection of views or &quot;pages&quot; representing playlist content.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="926668238%2FClasslikes%2F2049557335" anchor-label="QRCodeView" id="926668238%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-q-r-code-view/index.html"><span>QRCode</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="926668238%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-q-r-code-view/index.html">QRCodeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-q-r-code-view/index.html">QRCodeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-q-r-code-view/index.html">QRCodeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">androidx.appcompat.widget.AppCompatImageView</a> that displays a QR Code.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1339519213%2FClasslikes%2F2049557335" anchor-label="RichTextView" id="-1339519213%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-rich-text-view/index.html"><span>Rich</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1339519213%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-rich-text-view/index.html">RichTextView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-rich-text-view/index.html">RichTextView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-rich-text-view/index.html">RichTextView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">androidx.appcompat.widget.AppCompatImageView</a> that displays rich text content by rendering HTML into an image.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1674083973%2FClasslikes%2F2049557335" anchor-label="ShapeView" id="-1674083973%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-shape-view/index.html"><span>Shape</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1674083973%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-shape-view/index.html">ShapeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-shape-view/index.html">ShapeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-shape-view/index.html">ShapeView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">androidx.appcompat.widget.AppCompatImageView</a> that displays a geometric shape.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1375970302%2FClasslikes%2F2049557335" anchor-label="SlideshowView2" id="-1375970302%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-slideshow-view2/index.html"><span>Slideshow</span><wbr></wbr><span><span>View2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1375970302%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-slideshow-view2/index.html">SlideshowView2</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-slideshow-view2/index.html">SlideshowView2</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-slideshow-view2/index.html">SlideshowView2</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.rss/DownloadFeedTask2.OnCompleted///PointingToDeclaration/">DownloadFeedTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/DownloadImageTask2.OnCompleted///PointingToDeclaration/">DownloadImageTask2.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.placeexchange/PlaceExchangeAdRequestTask.OnCompleted///PointingToDeclaration/">PlaceExchangeAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player.vistarmedia/VistarAdRequestTask.OnCompleted///PointingToDeclaration/">VistarAdRequestTask.OnCompleted</span>, <span data-unresolved-link="com.reveldigital.player/PlayedHandler///PointingToDeclaration/">PlayedHandler</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">androidx.appcompat.widget.AppCompatImageView</a> that displays a slideshow of images.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="228463887%2FClasslikes%2F2049557335" anchor-label="StaticImageView" id="228463887%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-static-image-view/index.html"><span>Static</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="228463887%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-static-image-view/index.html">StaticImageView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-static-image-view/index.html">StaticImageView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-static-image-view/index.html">StaticImageView</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">AppCompatImageView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatImageView.html">androidx.appcompat.widget.AppCompatImageView</a> for displaying static images, including raster formats (like PNG, JPG) and SVG vector graphics.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-246532977%2FClasslikes%2F2049557335" anchor-label="TextView" id="-246532977%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-text-view/index.html"><span>Text</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-246532977%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-text-view/index.html">TextView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-text-view/index.html">TextView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-text-view/index.html">TextView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player/DownloadFileTask2.OnCompleted///PointingToDeclaration/">DownloadFileTask2.OnCompleted</span></div><div class="brief ">A custom view that displays text, offering two rendering modes: <ol><li><strong>Native Rendering:</strong> Uses an embedded <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/widget/AppCompatTextView.html">androidx.appcompat.widget.AppCompatTextView</a> for displaying text directly on the device. This mode supports auto-sizing text.</li><li><strong>Image Rendering:</strong> Sends the text and styling parameters to a remote service, which generates an image of the text. This image is then downloaded and displayed in an <a href="https://developer.android.com/reference/kotlin/android/widget/ImageView.html">ImageView</a>. This mode can be useful for achieving consistent text appearance across different devices or for complex styling not easily achievable natively.</li></ol> The rendering mode can be switched using <a href="[android-jvm]-text-view/set-use-native-rendering.html">setUseNativeRendering</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-453822598%2FClasslikes%2F2049557335" anchor-label="TVView" id="-453822598%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-t-v-view/index.html"><span><span>TVView</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-453822598%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/util/UnstableApi.html"><span class="token annotation builtin">UnstableApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-t-v-view/index.html">TVView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="https://developer.android.com/reference/kotlin/android/view/SurfaceHolder.Callback.html">SurfaceHolder.Callback</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnErrorListener.html">MediaPlayer.OnErrorListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnPreparedListener.html">MediaPlayer.OnPreparedListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnInfoListener.html">MediaPlayer.OnInfoListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnCompletionListener.html">MediaPlayer.OnCompletionListener</a></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/util/UnstableApi.html"><span class="token annotation builtin">UnstableApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-t-v-view/index.html">TVView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="https://developer.android.com/reference/kotlin/android/view/SurfaceHolder.Callback.html">SurfaceHolder.Callback</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnErrorListener.html">MediaPlayer.OnErrorListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnPreparedListener.html">MediaPlayer.OnPreparedListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnInfoListener.html">MediaPlayer.OnInfoListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnCompletionListener.html">MediaPlayer.OnCompletionListener</a></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/util/UnstableApi.html"><span class="token annotation builtin">UnstableApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-t-v-view/index.html">TVView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="https://developer.android.com/reference/kotlin/android/view/SurfaceHolder.Callback.html">SurfaceHolder.Callback</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnErrorListener.html">MediaPlayer.OnErrorListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnPreparedListener.html">MediaPlayer.OnPreparedListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnInfoListener.html">MediaPlayer.OnInfoListener</a>, <a href="https://developer.android.com/reference/kotlin/android/media/MediaPlayer.OnCompletionListener.html">MediaPlayer.OnCompletionListener</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a> that encapsulates video playback functionality, primarily for displaying TV streams or video content using an underlying <span data-unresolved-link="com.reveldigital.player.videoview/ExoPlayerVideoView2///PointingToDeclaration/">ExoPlayerVideoView2</span>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1953078776%2FClasslikes%2F2049557335" anchor-label="WeatherView" id="-1953078776%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-weather-view/index.html"><span>Weather</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1953078776%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-weather-view/index.html">WeatherView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.aeris/QueryObservationsTask.OnCompleted///PointingToDeclaration/">QueryObservationsTask.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-weather-view/index.html">WeatherView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.aeris/QueryObservationsTask.OnCompleted///PointingToDeclaration/">QueryObservationsTask.OnCompleted</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-weather-view/index.html">WeatherView</a> : <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <span data-unresolved-link="com.reveldigital.player.aeris/QueryObservationsTask.OnCompleted///PointingToDeclaration/">QueryObservationsTask.OnCompleted</span></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/widget/RelativeLayout.html">RelativeLayout</a> for displaying current weather conditions.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1089651368%2FClasslikes%2F2049557335" anchor-label="WebView" id="1089651368%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="[android-jvm]-web-view/index.html"><span>Web</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1089651368%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="[android-jvm]-web-view/index.html">WebView</a> : <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">WebView</a>, <a href="../com.reveldigital.player.api/[android-jvm]-revel-control/index.html">RevelControl</a>, <a href="../com.reveldigital.player.api/[android-jvm]-on-command-listener/index.html">OnCommandListener</a></div><div class="brief ">A custom <a href="https://developer.android.com/reference/kotlin/android/webkit/WebView.html">android.webkit.WebView</a> implementation that provides additional functionality for displaying web content within the RevelDigital player application.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

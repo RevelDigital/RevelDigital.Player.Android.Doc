@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]Controller</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/ic_launcher_foreground.png">
+<link href="../../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="revelplayer::com.reveldigital.player.api/Controller///PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../../index.html">revelplayer</a><span class="delimiter">/</span><a href="../index.html">com.reveldigital.player.api</a><span class="delimiter">/</span><span class="current">[androidJvm]Controller</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Controller</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Controller</a></div><p class="paragraph">Defines the primary programmatic interface for interacting with and controlling the RevelDigital player engine. </p><p class="paragraph">This interface provides access to a wide range of player functionalities, including device information, time management, network operations, event tracking, command execution, peripheral control (like printing and volume), and various listener registration mechanisms for subscribing to player events.</p><p class="paragraph">It is often made available within scripting environments (e.g., via a global variable named <code class="lang-kotlin">Controller</code>) to allow dynamic control and interaction with the player during runtime.</p><p class="paragraph">Implementations of this interface are expected to be thread-safe if methods can be called from multiple threads, particularly from script execution contexts or asynchronous callbacks.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">mtinnes</p></span><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">// Add the version when this controller API was stabilized</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-on-command-listener/index.html"><span>On</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-template-listener/index.html"><span>Template</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-on-played-listener/index.html"><span>On</span><wbr></wbr><span>Played</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-on-impression-listener/index.html"><span>On</span><wbr></wbr><span>Impression</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-on-beacon-listener/index.html"><span>On</span><wbr></wbr><span>Beacon</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-on-motion-listener/index.html"><span>On</span><wbr></wbr><span>Motion</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-connectivity-listener/index.html"><span>Connectivity</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-serial-listener/index.html"><span>Serial</span><wbr></wbr><span><span>Listener</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-316563876%2FFunctions%2F2049557335" anchor-label="addConnectivityListener" id="-316563876%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-connectivity-listener.html"><span>add</span><wbr></wbr><span>Connectivity</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-316563876%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-connectivity-listener.html"><span class="token function">addConnectivityListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers a <a href="../[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a> to receive notifications about changes in the player's internet connectivity status.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="706617924%2FFunctions%2F2049557335" anchor-label="addOnBeaconListener" id="706617924%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-on-beacon-listener.html"><span>add</span><wbr></wbr><span>On</span><wbr></wbr><span>Beacon</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="706617924%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-on-beacon-listener.html"><span class="token function">addOnBeaconListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers an <a href="../[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a> to receive notifications about beacon proximity events.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1782922314%2FFunctions%2F2049557335" anchor-label="addOnCommandListener" id="-1782922314%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-on-command-listener.html"><span>add</span><wbr></wbr><span>On</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1782922314%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-on-command-listener.html"><span class="token function">addOnCommandListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-command-listener/index.html">OnCommandListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers an <a href="../[android-jvm]-on-command-listener/index.html">OnCommandListener</a> to receive all commands processed by the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1337730758%2FFunctions%2F2049557335" anchor-label="addOnImpressionListener" id="-1337730758%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-on-impression-listener.html"><span>add</span><wbr></wbr><span>On</span><wbr></wbr><span>Impression</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1337730758%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-on-impression-listener.html"><span class="token function">addOnImpressionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers an <a href="../[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a> to receive notifications when content generates an impression.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2140636768%2FFunctions%2F2049557335" anchor-label="addOnMotionListener" id="2140636768%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-on-motion-listener.html"><span>add</span><wbr></wbr><span>On</span><wbr></wbr><span>Motion</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2140636768%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-on-motion-listener.html"><span class="token function">addOnMotionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-motion-listener/index.html">OnMotionListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers an <a href="../[android-jvm]-on-motion-listener/index.html">OnMotionListener</a> to receive notifications when motion is detected by the device or connected sensors.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1336554586%2FFunctions%2F2049557335" anchor-label="addOnPlayedListener" id="-1336554586%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-on-played-listener.html"><span>add</span><wbr></wbr><span>On</span><wbr></wbr><span>Played</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1336554586%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-on-played-listener.html"><span class="token function">addOnPlayedListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-played-listener/index.html">OnPlayedListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers an <a href="../[android-jvm]-on-played-listener/index.html">OnPlayedListener</a> to receive notifications when media items are played by the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1285475554%2FFunctions%2F2049557335" anchor-label="addSerialListener" id="1285475554%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-serial-listener.html"><span>add</span><wbr></wbr><span>Serial</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1285475554%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-serial-listener.html"><span class="token function">addSerialListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-serial-listener/index.html">SerialListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers a <a href="../[android-jvm]-serial-listener/index.html">SerialListener</a> to receive data from connected serial devices.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-220597802%2FFunctions%2F2049557335" anchor-label="addTemplateListener" id="-220597802%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-template-listener.html"><span>add</span><wbr></wbr><span>Template</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-220597802%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="add-template-listener.html"><span class="token function">addTemplateListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-template-listener/index.html">TemplateListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Registers a <a href="../[android-jvm]-template-listener/index.html">TemplateListener</a> to receive notifications about template-related events.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1515234950%2FFunctions%2F2049557335" anchor-label="converse" id="1515234950%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="converse.html"><span><span>converse</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1515234950%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="converse.html"><span class="token function">converse</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Initiates a voice interaction sequence: records audio from the device's microphone, sends it to a DialogFlow service for processing, and delivers the result asynchronously as a command.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="594282261%2FFunctions%2F2049557335" anchor-label="getDevice" id="594282261%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-device.html"><span>get</span><wbr></wbr><span><span>Device</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="594282261%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-device.html"><span class="token function">getDevice</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-device/index.html">Device</a></div><div class="brief ">Retrieves detailed information about the physical device and the RevelDigital player application instance currently running.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2128441350%2FFunctions%2F2049557335" anchor-label="getDeviceKey" id="2128441350%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-device-key.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2128441350%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-device-key.html"><span class="token function">getDeviceKey</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Retrieves the unique identifier (GUID) assigned to this RevelDigital player device.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="520013214%2FFunctions%2F2049557335" anchor-label="getDeviceTime" id="520013214%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-device-time.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="520013214%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-device-time.html"><span class="token function">getDeviceTime</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the current system time of the device, adjusted to the device's configured time zone.</div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-device-time.html"><span class="token function">getDeviceTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>date<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Adjusts the supplied <a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a> object to reflect the device's configured time zone.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21574310%2FFunctions%2F2049557335" anchor-label="getLastCommand" id="-21574310%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-last-command.html"><span>get</span><wbr></wbr><span>Last</span><wbr></wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21574310%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-last-command.html"><span class="token function">getLastCommand</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-command/index.html">Command</a></div><div class="brief ">Retrieves the most recently processed or issued <a href="../[android-jvm]-command/index.html">Command</a> handled by the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-162721892%2FFunctions%2F2049557335" anchor-label="getOkHttpClient" id="-162721892%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-ok-http-client.html"><span>get</span><wbr></wbr><span>Ok</span><wbr></wbr><span>Http</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-162721892%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-ok-http-client.html"><span class="token function">getOkHttpClient</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span></div><div class="brief ">Returns an OkHttp client instance for making HTTP/HTTPS network calls.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1460120180%2FFunctions%2F2049557335" anchor-label="getSchedule" id="1460120180%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-schedule.html"><span>get</span><wbr></wbr><span><span>Schedule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1460120180%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-schedule.html"><span class="token function">getSchedule</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-schedule/index.html">Schedule</a></div><div class="brief ">Retrieves the currently active playback schedule for the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1712699919%2FFunctions%2F2049557335" anchor-label="getTemplate" id="-1712699919%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-template.html"><span>get</span><wbr></wbr><span><span>Template</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1712699919%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-template.html"><span class="token function">getTemplate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-template/index.html">Template</a></div><div class="brief ">Retrieves the currently active template that is scheduled and rendering on the player.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-898483126%2FFunctions%2F2049557335" anchor-label="getVersionCode" id="-898483126%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-version-code.html"><span>get</span><wbr></wbr><span>Version</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-898483126%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-version-code.html"><span class="token function">getVersionCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Retrieves the version code of the RevelDigital player application.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1707451966%2FFunctions%2F2049557335" anchor-label="isConnected" id="-1707451966%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-connected.html"><span>is</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1707451966%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="is-connected.html"><span class="token function">isConnected</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief ">Checks if the player currently has active Internet connectivity.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="728484007%2FFunctions%2F2049557335" anchor-label="newEventSession" id="728484007%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="new-event-session.html"><span>new</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="728484007%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="new-event-session.html"><span class="token function">newEventSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Starts a new event session with an automatically generated, unique identifier.</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="new-event-session.html"><span class="token function">newEventSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>id<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Starts a new event session with a custom, user-provided identifier.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1370825364%2FFunctions%2F2049557335" anchor-label="print" id="-1370825364%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="print.html"><span><span>print</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1370825364%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="print.html"><span class="token function">print</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Sends raw byte data directly to the connected USB printer.</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="print.html"><span class="token function">print</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>text<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cut<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Prints the given text to the connected USB printer, with an option to cut the paper.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="85344913%2FFunctions%2F2049557335" anchor-label="removeConnectivityListener" id="85344913%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-connectivity-listener.html"><span>remove</span><wbr></wbr><span>Connectivity</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="85344913%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-connectivity-listener.html"><span class="token function">removeConnectivityListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-connectivity-listener/index.html">ConnectivityListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="77646713%2FFunctions%2F2049557335" anchor-label="removeOnBeaconListener" id="77646713%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-on-beacon-listener.html"><span>remove</span><wbr></wbr><span>On</span><wbr></wbr><span>Beacon</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="77646713%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-on-beacon-listener.html"><span class="token function">removeOnBeaconListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-on-beacon-listener/index.html">OnBeaconListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-633867349%2FFunctions%2F2049557335" anchor-label="removeOnCommandListener" id="-633867349%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-on-command-listener.html"><span>remove</span><wbr></wbr><span>On</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-633867349%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-on-command-listener.html"><span class="token function">removeOnCommandListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-command-listener/index.html">OnCommandListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-on-command-listener/index.html">OnCommandListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-935821969%2FFunctions%2F2049557335" anchor-label="removeOnImpressionListener" id="-935821969%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-on-impression-listener.html"><span>remove</span><wbr></wbr><span>On</span><wbr></wbr><span>Impression</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-935821969%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-on-impression-listener.html"><span class="token function">removeOnImpressionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-on-impression-listener/index.html">OnImpressionListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1511665557%2FFunctions%2F2049557335" anchor-label="removeOnMotionListener" id="1511665557%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-on-motion-listener.html"><span>remove</span><wbr></wbr><span>On</span><wbr></wbr><span>Motion</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511665557%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-on-motion-listener.html"><span class="token function">removeOnMotionListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-motion-listener/index.html">OnMotionListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-on-motion-listener/index.html">OnMotionListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1965525797%2FFunctions%2F2049557335" anchor-label="removeOnPlayedListener" id="-1965525797%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-on-played-listener.html"><span>remove</span><wbr></wbr><span>On</span><wbr></wbr><span>Played</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1965525797%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-on-played-listener.html"><span class="token function">removeOnPlayedListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-on-played-listener/index.html">OnPlayedListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-on-played-listener/index.html">OnPlayedListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1024960361%2FFunctions%2F2049557335" anchor-label="removeSerialListener" id="-1024960361%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-serial-listener.html"><span>remove</span><wbr></wbr><span>Serial</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1024960361%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-serial-listener.html"><span class="token function">removeSerialListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-serial-listener/index.html">SerialListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-serial-listener/index.html">SerialListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-849569013%2FFunctions%2F2049557335" anchor-label="removeTemplateListener" id="-849569013%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-template-listener.html"><span>remove</span><wbr></wbr><span>Template</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-849569013%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove-template-listener.html"><span class="token function">removeTemplateListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>listener<span class="token operator">: </span><a href="../[android-jvm]-template-listener/index.html">TemplateListener</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Unregisters a previously added <a href="../[android-jvm]-template-listener/index.html">TemplateListener</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-822466303%2FFunctions%2F2049557335" anchor-label="sendCommand" id="-822466303%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-command.html"><span>send</span><wbr></wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-822466303%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="send-command.html"><span class="token function">sendCommand</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>arg<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Sends a command to the local player engine for processing and dispatches it to all registered <a href="../[android-jvm]-on-command-listener/index.html">OnCommandListener</a> instances.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1204003619%2FFunctions%2F2049557335" anchor-label="sendRemoteCommand" id="-1204003619%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send-remote-command.html"><span>send</span><wbr></wbr><span>Remote</span><wbr></wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1204003619%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="send-remote-command.html"><span class="token function">sendRemoteCommand</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>registrationKeys<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>arg<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Sends a command to one or more remote RevelDigital player devices.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1606129595%2FFunctions%2F2049557335" anchor-label="setBrightness" id="-1606129595%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-brightness.html"><span>set</span><wbr></wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1606129595%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-brightness.html"><span class="token function">setBrightness</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">level<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Attempts to set the screen brightness for the application's window or the device.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1513286286%2FFunctions%2F2049557335" anchor-label="setVolume" id="1513286286%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-volume.html"><span>set</span><wbr></wbr><span><span>Volume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1513286286%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-volume.html"><span class="token function">setVolume</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">level<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Sets the master audio volume for the application.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-34945617%2FFunctions%2F2049557335" anchor-label="timeEvent" id="-34945617%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="time-event.html"><span>time</span><wbr></wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-34945617%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="time-event.html"><span class="token function">timeEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>eventName<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Starts a timer for a specific event name to measure its duration.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1018642637%2FFunctions%2F2049557335" anchor-label="track" id="-1018642637%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="track.html"><span><span>track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1018642637%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="track.html"><span class="token function">track</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>eventName<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Tracks a noteworthy occurrence or user interaction within the application.</div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="track.html"><span class="token function">track</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>eventName<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>properties<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Map.html">Map</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Tracks a noteworthy occurrence or user interaction, including custom contextual data.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
