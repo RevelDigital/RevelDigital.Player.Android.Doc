@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]Beacon</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/ic_launcher_foreground.png">
+<link href="../../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="revelplayer::com.reveldigital.player.api/Beacon///PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../../index.html">revelplayer</a><span class="delimiter">/</span><a href="../index.html">com.reveldigital.player.api</a><span class="delimiter">/</span><span class="current">[androidJvm]Beacon</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Beacon</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Beacon</a></div><p class="paragraph">Represents a beacon device and the context of a beacon-related event. </p><p class="paragraph">This interface provides access to various properties of a beacon, such as its identifiers, measured signal strength, and estimated distance, as well as details specific to a beacon event, like the event type (enter/exit) and timestamp.</p><p class="paragraph">Implementations of this interface are typically associated with events triggered when a user's device enters or exits the activation area of a physical beacon.</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-beacon-user/index.html"><span>Beacon</span><wbr></wbr><span><span>User</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-111790871%2FProperties%2F2049557335" anchor-label="EVENT_TYPE_ENTER" id="-111790871%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-v-e-n-t_-t-y-p-e_-e-n-t-e-r.html"><span>EVENT_</span><wbr></wbr><span>TYPE_</span><wbr></wbr><span>ENTER</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-111790871%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-v-e-n-t_-t-y-p-e_-e-n-t-e-r.html">EVENT_TYPE_ENTER</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span></div><div class="brief ">Represents an &quot;enter&quot; event for a beacon region.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-488766725%2FProperties%2F2049557335" anchor-label="EVENT_TYPE_EXIT" id="-488766725%2FProperties%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-v-e-n-t_-t-y-p-e_-e-x-i-t.html"><span>EVENT_</span><wbr></wbr><span>TYPE_</span><wbr></wbr><span>EXIT</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488766725%2FProperties%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-v-e-n-t_-t-y-p-e_-e-x-i-t.html">EVENT_TYPE_EXIT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">32</span></div><div class="brief ">Represents an &quot;exit&quot; event for a beacon region.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-356812546%2FFunctions%2F2049557335" anchor-label="getBluetoothName" id="-356812546%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-bluetooth-name.html"><span>get</span><wbr></wbr><span>Bluetooth</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-356812546%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-bluetooth-name.html"><span class="token function">getBluetoothName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the Bluetooth device name of the beacon, as broadcasted, if available.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="334995730%2FFunctions%2F2049557335" anchor-label="getDeviceId" id="334995730%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-device-id.html"><span>get</span><wbr></wbr><span>Device</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334995730%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-device-id.html"><span class="token function">getDeviceId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the identifier of the physical beacon device that triggered this event.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164091986%2FFunctions%2F2049557335" anchor-label="getDistance" id="-164091986%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-distance.html"><span>get</span><wbr></wbr><span><span>Distance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164091986%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-distance.html"><span class="token function">getDistance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets an estimated distance to the beacon in meters.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="655582277%2FFunctions%2F2049557335" anchor-label="getDwell" id="655582277%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dwell.html"><span>get</span><wbr></wbr><span><span>Dwell</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="655582277%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dwell.html"><span class="token function">getDwell</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief ">Gets the duration, in milliseconds, for which the user's device remained within the beacon's range before this event was triggered.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1328559672%2FFunctions%2F2049557335" anchor-label="getId" id="-1328559672%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-id.html"><span>get</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1328559672%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-id.html"><span class="token function">getId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the unique identifier for this specific beacon ping or event instance.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1283270657%2FFunctions%2F2049557335" anchor-label="getId1" id="1283270657%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-id1.html"><span>get</span><wbr></wbr><span><span>Id1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1283270657%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-id1.html"><span class="token function">getId1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the first identifier of the beacon.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1314290464%2FFunctions%2F2049557335" anchor-label="getId2" id="1314290464%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-id2.html"><span>get</span><wbr></wbr><span><span>Id2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1314290464%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-id2.html"><span class="token function">getId2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the second identifier of the beacon.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1345310271%2FFunctions%2F2049557335" anchor-label="getId3" id="1345310271%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-id3.html"><span>get</span><wbr></wbr><span><span>Id3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1345310271%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-id3.html"><span class="token function">getId3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the third identifier of the beacon.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1863865577%2FFunctions%2F2049557335" anchor-label="getLatitude" id="-1863865577%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-latitude.html"><span>get</span><wbr></wbr><span><span>Latitude</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1863865577%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-latitude.html"><span class="token function">getLatitude</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the geographical latitude associated with this beacon's configured location, if available.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-365644952%2FFunctions%2F2049557335" anchor-label="getLongitude" id="-365644952%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-longitude.html"><span>get</span><wbr></wbr><span><span>Longitude</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-365644952%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-longitude.html"><span class="token function">getLongitude</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></div><div class="brief ">Gets the geographical longitude associated with this beacon's configured location, if available.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1298397310%2FFunctions%2F2049557335" anchor-label="getMacAddress" id="1298397310%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-mac-address.html"><span>get</span><wbr></wbr><span>Mac</span><wbr></wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1298397310%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-mac-address.html"><span class="token function">getMacAddress</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div><div class="brief ">Gets the MAC address of the Bluetooth Low Energy (BLE) device acting as the beacon, if available.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1989168210%2FFunctions%2F2049557335" anchor-label="getManufacturer" id="1989168210%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-manufacturer.html"><span>get</span><wbr></wbr><span><span>Manufacturer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1989168210%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-manufacturer.html"><span class="token function">getManufacturer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets a two-byte code indicating the manufacturer of the beacon hardware.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1810962505%2FFunctions%2F2049557335" anchor-label="getPingType" id="-1810962505%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-ping-type.html"><span>get</span><wbr></wbr><span>Ping</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1810962505%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-ping-type.html"><span class="token function">getPingType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the type of beacon event.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-453343092%2FFunctions%2F2049557335" anchor-label="getRssi" id="-453343092%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-rssi.html"><span>get</span><wbr></wbr><span><span>Rssi</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-453343092%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-rssi.html"><span class="token function">getRssi</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the Received Signal Strength Indicator (RSSI) of the Bluetooth packet from the beacon.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2092754401%2FFunctions%2F2049557335" anchor-label="getTimestamp" id="2092754401%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-timestamp.html"><span>get</span><wbr></wbr><span><span>Timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2092754401%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-timestamp.html"><span class="token function">getTimestamp</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/Date.html">Date</a></div><div class="brief ">Gets the exact date and time when this beacon event occurred.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1785351434%2FFunctions%2F2049557335" anchor-label="getTxPower" id="-1785351434%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-tx-power.html"><span>get</span><wbr></wbr><span>Tx</span><wbr></wbr><span><span>Power</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1785351434%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-tx-power.html"><span class="token function">getTxPower</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief ">Gets the calibrated transmission power of the beacon in RSSI.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1327445912%2FFunctions%2F2049557335" anchor-label="getUser" id="1327445912%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-user.html"><span>get</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1327445912%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-user.html"><span class="token function">getUser</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../[android-jvm]-beacon-user/index.html">BeaconUser</a></div><div class="brief ">Gets the user profile associated with this beacon event, if any.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

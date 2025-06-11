@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>[androidJvm]ModuleType</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/ic_launcher_foreground.png">
+<link href="../../../styles/dokka-styles.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    revelplayer
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":revelplayer/viewsonicRelease">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":revelplayer/viewsonicRelease"
+                                       data-filter=":revelplayer/viewsonicRelease"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    revelplayer
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="revelplayer::com.reveldigital.player.api/ModuleType///PointingToDeclaration//2049557335">
+  <div class="breadcrumbs"><a href="../../../index.html">revelplayer</a><span class="delimiter">/</span><a href="../index.html">com.reveldigital.player.api</a><span class="delimiter">/</span><span class="current">[androidJvm]ModuleType</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Module</span><wbr></wbr><span><span>Type</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">ModuleType</a></div><p class="paragraph">Defines the various types of functional units or content regions (Modules) that can be used within the RevelDigital player's screen layouts. </p><p class="paragraph"> Each <code class="lang-kotlin">ModuleType</code> determines the kind of content a <a href="../[android-jvm]-module/index.html">Module</a> can display and its specific behavior or capabilities. For instance, an <code class="lang-kotlin">IMAGE</code> module is designed for slideshows, while a <code class="lang-kotlin">WEB</code> module renders web content. </p><p class="paragraph"> This enum is typically used in conjunction with the <a href="../[android-jvm]-module/get-type.html">getType</a> method to identify and handle different module functionalities. </p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../[android-jvm]-module/get-type.html"><span><span>Module</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="-1122561883%2FClasslikes%2F2049557335" anchor-label="UNKNOWN" id="-1122561883%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-n-k-n-o-w-n/index.html">UNKNOWN</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1122561883%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-u-n-k-n-o-w-n/index.html">UNKNOWN</a></div></div><div class="brief "><p class="paragraph">Represents an unknown or undefined module type. (Integer code: -1)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-531858003%2FClasslikes%2F2049557335" anchor-label="GALLERY" id="-531858003%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-a-l-l-e-r-y/index.html">GALLERY</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-531858003%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-g-a-l-l-e-r-y/index.html">GALLERY</a></div></div><div class="brief "><p class="paragraph">Displays a multimedia gallery, potentially including images and videos. (Integer code: 0)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1638008906%2FClasslikes%2F2049557335" anchor-label="IMAGE" id="-1638008906%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-m-a-g-e/index.html">IMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1638008906%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-i-m-a-g-e/index.html">IMAGE</a></div></div><div class="brief "><p class="paragraph">Renders an image slideshow with various transition effects. (Integer code: 1)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="947329495%2FClasslikes%2F2049557335" anchor-label="TICKER" id="947329495%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-c-k-e-r/index.html">TICKER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="947329495%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-t-i-c-k-e-r/index.html">TICKER</a></div></div><div class="brief "><p class="paragraph">Shows a scrolling marquee or ticker, typically for text-based information. (Integer code: 2)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1813241551%2FClasslikes%2F2049557335" anchor-label="WEATHER" id="1813241551%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-e-a-t-h-e-r/index.html">WEATHER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1813241551%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-w-e-a-t-h-e-r/index.html">WEATHER</a></div></div><div class="brief "><p class="paragraph">Displays current temperature and weather conditions for a specified location. (Integer code: 3)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-668857559%2FClasslikes%2F2049557335" anchor-label="CLOCK" id="-668857559%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-l-o-c-k/index.html">CLOCK</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-668857559%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-c-l-o-c-k/index.html">CLOCK</a></div></div><div class="brief "><p class="paragraph">Renders an analog or digital clock. (Integer code: 4)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1735729207%2FClasslikes%2F2049557335" anchor-label="STATIC_IMAGE" id="1735729207%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-a-t-i-c_-i-m-a-g-e/index.html">STATIC_IMAGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735729207%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-s-t-a-t-i-c_-i-m-a-g-e/index.html">STATIC_IMAGE</a></div></div><div class="brief "><p class="paragraph">Displays a single, static image without transitions. (Integer code: 5)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1023701109%2FClasslikes%2F2049557335" anchor-label="FLASH" id="-1023701109%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-l-a-s-h/index.html">FLASH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1023701109%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-f-l-a-s-h/index.html">FLASH</a></div></div><div class="brief "><p class="paragraph">Embeds and plays Adobe Flash content (SWF files). Note: Flash technology has limited support on modern platforms. (Integer code: 6)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-681308753%2FClasslikes%2F2049557335" anchor-label="WEB" id="-681308753%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-e-b/index.html">WEB</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-681308753%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-w-e-b/index.html">WEB</a></div></div><div class="brief "><p class="paragraph">Renders web pages or web-based applications using an embedded browser engine. (Integer code: 7)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1870133297%2FClasslikes%2F2049557335" anchor-label="TV" id="-1870133297%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-v/index.html">TV</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1870133297%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-t-v/index.html">TV</a></div></div><div class="brief "><p class="paragraph">Displays live TV input or a video feed from a connected source. (Integer code: 8)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="857315252%2FClasslikes%2F2049557335" anchor-label="KEYBOARD" id="857315252%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-k-e-y-b-o-a-r-d/index.html">KEYBOARD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="857315252%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-k-e-y-b-o-a-r-d/index.html">KEYBOARD</a></div></div><div class="brief "><p class="paragraph">Provides an on-screen keyboard, typically for use with kiosk or touch-enabled displays. (Integer code: 9)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1940639482%2FClasslikes%2F2049557335" anchor-label="TEXT" id="1940639482%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-e-x-t/index.html">TEXT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1940639482%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-t-e-x-t/index.html">TEXT</a></div></div><div class="brief "><p class="paragraph">Displays simple, unformatted static text. (Integer code: 10)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="598763%2FClasslikes%2F2049557335" anchor-label="RICH_TEXT" id="598763%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-i-c-h_-t-e-x-t/index.html">RICH_TEXT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="598763%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-r-i-c-h_-t-e-x-t/index.html">RICH_TEXT</a></div></div><div class="brief "><p class="paragraph">Displays richly formatted text, potentially with various styles and fonts. (Integer code: 11)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1143430943%2FClasslikes%2F2049557335" anchor-label="HOT_SPOT" id="-1143430943%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-o-t_-s-p-o-t/index.html">HOT_SPOT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1143430943%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-h-o-t_-s-p-o-t/index.html">HOT_SPOT</a></div></div><div class="brief "><p class="paragraph">Defines interactive touch regions, often used in kiosk applications to trigger actions. (Integer code: 12)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1371610630%2FClasslikes%2F2049557335" anchor-label="QR_CODE" id="1371610630%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-q-r_-c-o-d-e/index.html">QR_CODE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1371610630%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-q-r_-c-o-d-e/index.html">QR_CODE</a></div></div><div class="brief "><p class="paragraph">Generates and displays a QR (Quick Response) code image from provided data. (Integer code: 13)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="901188505%2FClasslikes%2F2049557335" anchor-label="GADGET" id="901188505%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-a-d-g-e-t/index.html">GADGET</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901188505%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-g-a-d-g-e-t/index.html">GADGET</a></div></div><div class="brief "><p class="paragraph">Embeds a Google Gadget. Note: Google Gadgets as a platform have largely been deprecated. (Integer code: 14)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1661969791%2FClasslikes%2F2049557335" anchor-label="SCROLL_VIEWER" id="1661969791%2FClasslikes%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-c-r-o-l-l_-v-i-e-w-e-r/index.html">SCROLL_VIEWER</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1661969791%2FClasslikes%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><div class="block"><a href="-s-c-r-o-l-l_-v-i-e-w-e-r/index.html">SCROLL_VIEWER</a></div></div><div class="brief "><p class="paragraph">Displays a touch-enabled image scroller or viewer. (Integer code: 15)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="270351939%2FFunctions%2F2049557335" anchor-label="fromString" id="270351939%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-string.html"><span>from</span><wbr></wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="270351939%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="from-string.html"><span class="token function">fromString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">ModuleType</a></div><div class="brief ">Converts a string representation of a module type to the corresponding <code class="lang-kotlin">ModuleType</code> enum constant.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1149990602%2FFunctions%2F2049557335" anchor-label="valueOf" id="1149990602%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1149990602%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">ModuleType</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-674507679%2FFunctions%2F2049557335" anchor-label="values" id="-674507679%2FFunctions%2F2049557335" data-filterable-set=":revelplayer/viewsonicRelease"></a>
+          <div class="table-row" data-filterable-current=":revelplayer/viewsonicRelease" data-filterable-set=":revelplayer/viewsonicRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-674507679%2FFunctions%2F2049557335"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":revelplayer/viewsonicRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">ModuleType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared. This method may be used to iterate over the constants.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Revel Digital</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
